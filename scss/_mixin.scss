@@ -1,0 +1,27 @@
+@mixin breakpoint($media) {
+  @if $media == smallest {
+    @media only screen and (max-width: 400px) { @content; }
+  }
+  @else if $media == small {
+    @media only screen and (max-width: 600px) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (max-width: 760px) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (max-width: 960px) { @content; }
+  }
+}
+
+/*@mixin border-radius($value...){
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value; 
+}
+$tablet: 500px;
+@mixin block-display($width){
+	display: block;
+	@media screen and (min-width: $width){
+		display: inline-block;
+	}
+}*/
